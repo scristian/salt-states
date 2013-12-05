@@ -13,6 +13,7 @@ php5:
       - curl
       - libcurl3
       - php5-curl
+      - php5-ldap
 
 /var/www/owncloud/config/config.php:
   file.managed:

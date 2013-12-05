@@ -1,5 +1,6 @@
 include: 
   - salt.minion
+  - mysql
 
 python-mysqldb:
   pkg.installed
