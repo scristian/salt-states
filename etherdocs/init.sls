@@ -2,12 +2,15 @@ include:
   - redis
   - node
   - supervisor
+  - mysql
+  - etherdocs.mysql
 
 ethercalc:
   npm.installed:
   - require:
     - pkg: npm
     - pkg: redis-server
+
 
 git_repo:
   git.latest:
@@ -26,6 +29,8 @@ files_etherdocs:
     - require:
       - pkg: git
       - pkg: nodejs
+    - require_in:
+      - file: /var/www/etherpad/settings.json
 
 /etc/supervisor/conf.d/ethercalc.conf:
   file.managed:
@@ -47,4 +52,7 @@ files_etherdocs:
       - require:
         - pkg: nodejs
 
-#todo: add supervisor to monitor processes
+/var/www/etherpad/settings.json:
+  file.managed:
+    - source: salt://etherdocs/files/settings.json
+
