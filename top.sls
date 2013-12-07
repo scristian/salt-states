@@ -8,3 +8,4 @@ base:
     - match: grain
     - owncloud
     - etherdocs
+    - dokuwiki
