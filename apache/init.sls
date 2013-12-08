@@ -16,4 +16,3 @@ apache:
     - require:
       - pkg: apache2
 
-#a2enmod rewrite for ubuntu

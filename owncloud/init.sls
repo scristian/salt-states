@@ -14,6 +14,15 @@ include:
     - source: salt://owncloud/files/owncloud.conf
     - require:
       - pkg: apache2
+  
+apache2-enable-mod-rewrite:
+  cmd.run: 
+    - name: a2enmod rewrite
+    - unless: test -f '/etc/apache2/mods-enabled/rewrite.load'
+    - require:
+      - pkg: apache2
+    - watch_in:
+      - service: apache
 
 /etc/php5/apache2/php.ini:
   file.managed:

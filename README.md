@@ -5,9 +5,9 @@ Salt stack states
 
 http://www.saltstack.com/community/
 
-## STATUS:
-### Owncloud
-test only with Ubuntu 13.10
+### STATUS:
+#### Owncloud
+Tested only with Ubuntu 13.10
 
 ## Planned:
 - to support CentOS and Ubuntu
