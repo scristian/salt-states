@@ -9,3 +9,7 @@ base:
     - owncloud
     - etherdocs
     - dokuwiki
+
+  'roles:loovea':
+    - match: grain
+    - loovea

@@ -14,7 +14,9 @@ include:
     - source: salt://owncloud/files/owncloud.conf
     - require:
       - pkg: apache2
-  
+
+sendmail: pkg.intalled 
+
 apache2-enable-mod-rewrite:
   cmd.run: 
     - name: a2enmod rewrite
